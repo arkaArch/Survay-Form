@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <img class="tux-logo" src="./images/penguin.avif" alt="tux-logo"> 
+    <h1 id="title">Linux User Survey Form</h1>
+    <p id="description">Thank you for give us a chance to build your distro</p>
+
+    <form id="survey-form">
+        <fieldset>
+            <label for="name" id="name-label">Name
+                <input class="toBottom" id="name" name="user-name" type="text" placeholder="Enter your name"
+                    required /></label>
+
+            <label for="email" id="email-label">Email
+                <input class="toBottom" id="email" name="user-mail" type="email" placeholder="Enter your email"
+                    required /></label>
+
+            <label for="number" id="number-label">Age (optional)
+                <input class="toBottom" id="number" name="user-age" type="number" min="10" max="110"
+                    placeholder="Age" /></label>
+
+            <label for="dropdown">Which type of distro are you prefer?
+                <select class="release-type" id="dropdown" name="type-of-distro">
+                    <option value="">(select one)</option>
+                    <option value="1">Stable Release</option>
+                    <option value="2">Rolling Release</option>
+                    <option value="3">Having Both Branch</option>
+                </select>
+            </label>
+
+            <label class="ump-heading">What universal package manager you like most?</label>
+            <label class="upm" for="snap">
+                <input class="inline" id="snap" name="universal-package-manager" type="radio" value="snap" />
+                Snap
+            </label>
+            <label class="upm" for="flatpak">
+                <input class="inline" id="flatpak" name="universal-package-manager" type="radio" value="flatpak" />
+                Flatpak
+            </label>
+            <label class="upm" for="appImage">
+                <input class="inline" id="appImage" name="universal-package-manager" type="radio" value="appImages" />
+                AppImages
+            </label>
+
+            <label class="distro-heading">What distro are you using(Check all that apply)</label>
+                <label class="distro" for="arch">
+                    <input class="inline" id="arch" name="distro(s)" type="checkbox" value="arch" />
+                    Arch
+                </label>
+                <label class="distro" for="debian">
+                    <input class="inline" id="debian" name="distro(s)" type="checkbox" value="debian" />
+                    Debian
+                </label>
+                <label class="distro" for="openSUSE">
+                    <input class="inline" id="openSUSE" name="distro(s)" type="checkbox" value="openSUSE" />
+                    openSUSE
+                </label>
+                <label class="distro" for="fedora">
+                    <input class="inline" id="fedora" name="distro(s)" type="checkbox" value="fedora" />
+                    Fedora
+                </label>
+                <label class="distro" for="gentoo">
+                    <input class="inline" id="gentoo" name="distro(s)" type="checkbox" value="gentoo" />
+                    Gentoo
+                </label>
+                <label class="distro" for="slackware">
+                    <input class="inline" id="slackware" name="distro(s)" type="checkbox" value="slackware" />
+                    Slackware
+                </label>
+
+                <label for="comments">Any comments or suggestions?
+                    <textarea id="comments" name="user-comment" rows="6" cols="30"
+                        placeholder="Enter your comment here..."></textarea>
+            </label>
+        </fieldset>
+
+        <input id="submit" type="submit" value="Submit">
+
+    </form>
+</body>
+
+</html>
